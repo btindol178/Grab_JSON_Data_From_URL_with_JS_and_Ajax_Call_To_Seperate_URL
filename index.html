@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+
+<script>  
+    $.ajax({
+  url:"/",
+  type: 'GET',
+  dataType: 'json',
+  success : function(data){
+    //data is a variable containing the returned data
+    console.log(data)
+    var text = `age: ${data.age}, name: ${data.name},car: ${data.car}`
+    var h = document.createElement("H1"); // Create the H1 element 
+    var t = document.createTextNode(text); // Create a text element 
+    h.appendChild(t); // Append the text node to the H1 element 
+    document.body.appendChild(h);
+  }
+});
+</script>
+</html>
