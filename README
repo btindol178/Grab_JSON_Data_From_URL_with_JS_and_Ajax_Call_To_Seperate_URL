@@ -1,1 +1,5 @@
 This repository is an example of how to grab json data posted from one url to another!
+
+/templates
+  |--index.html
+  |--index2.html
